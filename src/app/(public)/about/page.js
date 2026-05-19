@@ -12,10 +12,26 @@ import SectionHeading from "@/components/public/SectionHeading";
 import { getCertificationsByType } from "@/data/certifications";
 
 const techStack = [
-  { title: "Backend", icon: FiServer, items: ["Node.js", "Python", "PostgreSQL", "Redis"] },
-  { title: "Frontend", icon: FiCode, items: ["React", "Next.js", "JavaScript", "Tailwind"] },
-  { title: "Infra & Ops", icon: FiCloud, items: ["AWS", "Docker", "GitHub Actions", "Vercel"] },
-  { title: "Database", icon: FiDatabase, items: ["Prisma", "MongoDB", "Query Optimization", "Data Modeling"] },
+  {
+    title: "Backend & Architecture",
+    icon: FiServer,
+    items: ["Node.js", "Python", "PostgreSQL", "Redis"],
+  },
+  {
+    title: "Frontend Experience",
+    icon: FiCode,
+    items: ["React", "Next.js", "JavaScript", "Tailwind"],
+  },
+  {
+    title: "Cloud & Deployment",
+    icon: FiCloud,
+    items: ["AWS", "Docker", "GitHub Actions", "Vercel"],
+  },
+  {
+    title: "System & Workflow",
+    icon: FiDatabase,
+    items: ["Automation", "Dashboard System", "API Integration", "CI/CD"],
+  },
 ];
 
 export const metadata = {
@@ -29,27 +45,38 @@ export default function AboutPage() {
   return (
     <div className="space-y-16 pb-10">
       <section className="animate-fade-in-up space-y-6">
-        <h1 className="flex items-center gap-2 text-3xl font-bold text-foreground">
-          <FiUser className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
+        <h1 className="mb-3 flex items-center gap-2 text-3xl font-bold text-foreground">
+          <FiUser className="h-6 w-6" />
           Tentang Saya
         </h1>
         <div className="space-y-4 text-lg leading-relaxed text-foreground">
           <p>
-            Sebagai seorang profesional di bidang perangkat lunak, saya memiliki pengalaman mendalam dalam
-            merancang dan mengimplementasikan sistem backend yang tangguh. Filosofi kerja saya berpusat pada
-            menciptakan kode yang tidak hanya berfungsi secara teknis, tetapi juga memberikan nilai tambah yang
-            signifikan bagi bisnis.
+            Saya adalah Full Stack Developer yang tertarik membangun sistem
+            digital yang membantu operasional bisnis menjadi lebih sederhana,
+            terstruktur, dan efisien.
           </p>
           <p>
-            Saya percaya pada pendekatan kolaboratif dan komunikasi yang jelas untuk memastikan setiap solusi
-            teknis selaras dengan tujuan strategis perusahaan. Saat ini, fokus utama saya adalah arsitektur
-            cloud-native, pengoptimalan performa aplikasi skala menengah, dan memastikan skalabilitas sistem
-            untuk pertumbuhan masa depan.
+            Saya menikmati proses mengubah workflow yang rumit menjadi platform
+            yang lebih mudah digunakan — mulai dari sistem booking, dashboard
+            operasional, hingga automation workflow.
+          </p>
+          <p>
+            Saat ini saya berfokus pada pengembangan web modern menggunakan
+            Next.js dan Node.js, sambil terus mempelajari system architecture,
+            cloud infrastructure, dan workflow automation.
+          </p>
+          <p>
+            Bagi saya, teknologi bukan hanya tentang menulis kode, tetapi
+            tentang membangun solusi yang benar-benar digunakan dan memberikan
+            dampak nyata.
           </p>
         </div>
       </section>
 
-      <div className="animate-fade-in-up w-full border-t border-border" style={{ animationDelay: "100ms" }} />
+      <div
+        className="animate-fade-in-up w-full border-t border-border"
+        style={{ animationDelay: "100ms" }}
+      />
 
       <section
         className="animate-fade-in-up space-y-6 opacity-0"
@@ -85,7 +112,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="animate-fade-in-up w-full border-t border-border" style={{ animationDelay: "300ms" }} />
+      <div
+        className="animate-fade-in-up w-full border-t border-border"
+        style={{ animationDelay: "300ms" }}
+      />
 
       <section
         className="animate-fade-in-up space-y-6 opacity-0"
@@ -93,11 +123,18 @@ export default function AboutPage() {
       >
         <SectionHeading icon={FiAward} title="Sertifikasi & Pelatihan" />
         <div className="space-y-8">
-          <CredentialTable credentials={certificationRows} title="Sertifikasi" type="Sertifikasi" />
-          <CredentialTable credentials={trainingRows} title="Pelatihan" type="Pelatihan" />
+          <CredentialTable
+            credentials={certificationRows}
+            title="Sertifikasi"
+            type="Sertifikasi"
+          />
+          <CredentialTable
+            credentials={trainingRows}
+            title="Pelatihan"
+            type="Pelatihan"
+          />
         </div>
       </section>
     </div>
   );
 }
-

@@ -22,6 +22,7 @@ export default function ProjectCard({ project }) {
         <h3 className="line-clamp-2 text-lg font-semibold text-foreground transition-colors group-hover:text-ink">
           {project.title}
         </h3>
+        <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-foreground">{project.intro}</p>
       </div>
     </Link>
   );

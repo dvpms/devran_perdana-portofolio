@@ -51,14 +51,16 @@ export default function Sidebar({ isOpen, onClose }) {
         }`}
       >
         <div className="flex h-14 items-center justify-between border-b border-border px-6 md:hidden">
-          <Link
-            className="flex items-center gap-2 font-medium text-foreground"
-            href="/"
-            onClick={onClose}
-          >
-            <FiBookOpen className="h-5 w-5" aria-hidden="true" />
-            {profile.name}
-          </Link>
+          <div className="flex flex-col items-start">
+            <Link
+              className="flex text-sm font-bold text-foreground"
+              href="/"
+              onClick={onClose}
+            >
+              {profile.name}
+            </Link>
+            <span className="text-xs text-muted-foreground">Full Stack Developer</span>
+          </div>
           <button
             className="rounded-sm p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             onClick={onClose}
@@ -70,18 +72,18 @@ export default function Sidebar({ isOpen, onClose }) {
         </div>
 
         <nav className="flex flex-1 flex-col gap-2 overflow-y-auto px-4 py-8">
-          <div className="p-6 h-14 md:h-auto flex items-center justify-between border-b md:border-b-0 border-notion-border">
+          <div className="py-6 px-3 h-14 md:h-auto md:flex items-center justify-between border-b md:border-b-0 border-border hidden">
             <Link
               href="/"
-              className="font-medium flex items-center gap-2 text-notion-text hover:opacity-70 transition-opacity"
+              className="font-medium flex flex-col items-start gap-2 text-notion-text hover:opacity-70 transition-opacity"
             >
-              <span>Devran Perdana Malik</span>
+              <span className="font-bold">{profile.name}</span>
+              <span className="text-xs text-muted-foreground">Full Stack Developer</span>
             </Link>
             <button
               className="md:hidden text-notion-gray p-1 hover:bg-notion-hover rounded transition-colors"
               onClick={onClose}
             >
-              <FiX className="h-5 w-5" aria-hidden="true" />
             </button>
           </div>
 
@@ -130,7 +132,13 @@ export default function Sidebar({ isOpen, onClose }) {
             </div>
             <div className="flex items-center gap-2">
               <FiPhone className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-              <span>{profile.phone}</span>
+              <a
+                href={`https://wa.me/${profile.phone}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {profile.phone}
+              </a>
             </div>
             <a
               className="flex items-center gap-2 transition-colors hover:text-foreground"
