@@ -3,16 +3,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft, FiExternalLink, FiLayers } from "react-icons/fi";
 import Badge from "@/components/public/Badge";
-import { getProjectById, projects } from "@/data/projects";
-import SectionHeading from "@/components/public/SectionHeading";
+import { DEFAULT_LOCALE, getProjectBySlug } from "@/lib/content";
+import { getProjectById as fallbackGetProjectById } from "@/data/projects";
 
-export function generateStaticParams() {
-  return projects.map((project) => ({ id: project.id }));
-}
+export const revalidate = 60;
 
 export async function generateMetadata({ params }) {
-  const { id } = await params;
-  const project = getProjectById(id);
+  const { id } = params;
+  const project =
+    (await getProjectBySlug(id, DEFAULT_LOCALE)) ?? fallbackGetProjectById(id);
 
   if (!project) {
     return {
@@ -27,8 +26,9 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ProjectDetailPage({ params }) {
-  const { id } = await params;
-  const project = getProjectById(id);
+  const { id } = params;
+  const project =
+    (await getProjectBySlug(id, DEFAULT_LOCALE)) ?? fallbackGetProjectById(id);
 
   const highlights = project?.highlights ?? [];
   const challenges = project?.challenges ?? [];

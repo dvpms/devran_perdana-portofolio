@@ -9,10 +9,17 @@ import {
 } from "react-icons/fi";
 import ProjectCard from "@/components/public/ProjectCard";
 import SectionHeading from "@/components/public/SectionHeading";
-import { profile } from "@/data/profile";
-import { projects } from "@/data/projects";
+import { DEFAULT_LOCALE, getPublicProfile, listProjects } from "@/lib/content";
+import { profile as fallbackProfile } from "@/data/profile";
+import { projects as fallbackProjects } from "@/data/projects";
 
-export default function HomePage() {
+export const revalidate = 60;
+
+export default async function HomePage() {
+  const profile = (await getPublicProfile(DEFAULT_LOCALE)) ?? fallbackProfile;
+  const dbProjects = await listProjects(DEFAULT_LOCALE);
+  const projects = dbProjects.length > 0 ? dbProjects : fallbackProjects;
+
   return (
     <div className="space-y-20 pb-10">
       <section className="pt-4 md:pt-0">

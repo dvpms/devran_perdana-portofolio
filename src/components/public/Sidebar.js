@@ -13,7 +13,6 @@ import {
   FiUser,
   FiX,
 } from "react-icons/fi";
-import { profile } from "@/data/profile";
 import SocialIcon from "./SocialIcon";
 
 const navItems = [
@@ -31,7 +30,7 @@ function getIsActive(pathname, href) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export default function Sidebar({ isOpen, onClose }) {
+export default function Sidebar({ isOpen, onClose, profile }) {
   const pathname = usePathname();
 
   return (
@@ -57,7 +56,7 @@ export default function Sidebar({ isOpen, onClose }) {
               href="/"
               onClick={onClose}
             >
-              {profile.name}
+              {profile?.name}
             </Link>
             <span className="text-xs text-muted-foreground">Full Stack Developer</span>
           </div>
@@ -77,7 +76,7 @@ export default function Sidebar({ isOpen, onClose }) {
               href="/"
               className="font-medium flex flex-col items-start gap-2 text-notion-text hover:opacity-70 transition-opacity"
             >
-              <span className="font-bold">{profile.name}</span>
+              <span className="font-bold">{profile?.name}</span>
               <span className="text-xs text-muted-foreground">Full Stack Developer</span>
             </Link>
             <button
@@ -128,29 +127,29 @@ export default function Sidebar({ isOpen, onClose }) {
                 className="mt-0.5 h-3.5 w-3.5 shrink-0"
                 aria-hidden="true"
               />
-              <span>{profile.location}</span>
+              <span>{profile?.location}</span>
             </div>
             <div className="flex items-center gap-2">
               <FiPhone className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
               <a
-                href={`https://wa.me/${profile.phone}`}
+                href={profile?.phone ? `https://wa.me/${profile.phone}` : "#"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {profile.phone}
+                {profile?.phone}
               </a>
             </div>
             <a
               className="flex items-center gap-2 transition-colors hover:text-foreground"
-              href={`mailto:${profile.email}`}
+              href={profile?.email ? `mailto:${profile.email}` : "#"}
             >
               <FiMail className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-              <span className="truncate">{profile.email}</span>
+              <span className="truncate">{profile?.email}</span>
             </a>
           </div>
 
           <div className="flex items-center gap-4 border-t border-border pt-3">
-            {profile.socials.map((social) => (
+            {(profile?.socials ?? []).map((social) => (
               <a
                 className="transition-all hover:-translate-y-1 hover:text-foreground"
                 href={social.href}

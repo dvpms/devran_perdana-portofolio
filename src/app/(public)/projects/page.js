@@ -2,13 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiBriefcase } from "react-icons/fi";
 import Badge from "@/components/public/Badge";
-import { projects } from "@/data/projects";
+import { DEFAULT_LOCALE, listProjects } from "@/lib/content";
+import { projects as fallbackProjects } from "@/data/projects";
 
 export const metadata = {
   title: "Projects - Devran Perdana Malik | Full Stack Developer",
 };
 
-export default function ProjectsPage() {
+export const revalidate = 60;
+
+export default async function ProjectsPage() {
+  const dbProjects = await listProjects(DEFAULT_LOCALE);
+  const projects = dbProjects.length > 0 ? dbProjects : fallbackProjects;
+
   return (
     <div className="space-y-8 pb-10">
       <div className="animate-fade-in-up" >

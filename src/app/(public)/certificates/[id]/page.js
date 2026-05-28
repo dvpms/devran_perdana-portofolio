@@ -3,15 +3,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft } from "react-icons/fi";
 import Badge from "@/components/public/Badge";
-import { certifications, getCertificationById } from "@/data/certifications";
+import { DEFAULT_LOCALE, getCredentialBySlug } from "@/lib/content";
+import { getCertificationById as fallbackGetCertificationById } from "@/data/certifications";
 
-export function generateStaticParams() {
-  return certifications.map((certification) => ({ id: certification.id }));
-}
+export const revalidate = 60;
 
 export async function generateMetadata({ params }) {
-  const { id } = await params;
-  const certification = getCertificationById(id);
+  const { id } = params;
+  const certification =
+    (await getCredentialBySlug(id, DEFAULT_LOCALE)) ?? fallbackGetCertificationById(id);
 
   if (!certification) {
     return { title: "Credential Not Found - Devran Perdana Malik | Full Stack Developer" };
@@ -24,8 +24,9 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function CertificationDetailPage({ params }) {
-  const { id } = await params;
-  const certification = getCertificationById(id);
+  const { id } = params;
+  const certification =
+    (await getCredentialBySlug(id, DEFAULT_LOCALE)) ?? fallbackGetCertificationById(id);
 
   if (!certification) {
     notFound();
