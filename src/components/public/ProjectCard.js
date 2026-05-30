@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Badge from "./Badge";
+import { getProjectPrimaryImage } from "@/data/projects";
 
 export default function ProjectCard({ project }) {
+  const primaryImage = getProjectPrimaryImage(project);
+
   return (
     <Link
       className="group overflow-hidden rounded-md border border-border bg-background transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
@@ -13,7 +16,7 @@ export default function ProjectCard({ project }) {
           alt={project.title}
           className="h-48 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           height={360}
-          src={project.image}
+          src={primaryImage}
           width={720}
         />
       </div>

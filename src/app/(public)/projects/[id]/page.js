@@ -1,10 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft, FiExternalLink, FiLayers } from "react-icons/fi";
 import Badge from "@/components/public/Badge";
+import ProjectImageSlider from "@/components/public/ProjectImageSlider";
 import { getProjectById, projects } from "@/data/projects";
-import SectionHeading from "@/components/public/SectionHeading";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ id: project.id }));
@@ -31,6 +30,7 @@ export default async function ProjectDetailPage({ params }) {
   const project = getProjectById(id);
 
   const highlights = project?.highlights ?? [];
+  const images = project?.image ?? [];
   const challenges = project?.challenges ?? [];
   const impacts = project?.impacts ?? [];
   const contributions = project?.contributions ?? [];
@@ -69,19 +69,7 @@ export default async function ProjectDetailPage({ params }) {
         </div>
       </div>
 
-      <div
-        className="animate-fade-in-up overflow-hidden rounded-md border border-border opacity-0"
-        style={{ animationDelay: "200ms", animationFillMode: "forwards" }}
-      >
-        <Image
-          alt={project.title}
-          className="h-auto w-full transition-transform duration-700 ease-out hover:scale-[1.02]"
-          height={600}
-          priority
-          src={project.image}
-          width={1200}
-        />
-      </div>
+      <ProjectImageSlider images={images} title={project.title} />
 
       <section
         className="animate-fade-in-up mt-8 flex flex-col items-center justify-between gap-4 rounded-md border border-border bg-surface p-6 opacity-0 sm:flex-row"

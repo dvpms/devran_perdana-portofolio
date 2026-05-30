@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiBriefcase } from "react-icons/fi";
 import Badge from "@/components/public/Badge";
-import { projects } from "@/data/projects";
+import { getProjectPrimaryImage, projects } from "@/data/projects";
 
 export const metadata = {
   title: "Projects - Devran Perdana Malik | Full Stack Developer",
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
                 alt={project.title}
                 className="min-h-60 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 height={420}
-                src={project.image}
+                src={getProjectPrimaryImage(project)}
                 width={840}
               />
             </Link>
@@ -55,8 +55,8 @@ export default function ProjectsPage() {
                   </h2>
                 </Link>
               </div>
-              <p className="line-clamp-3 leading-relaxed text-foreground">
-                {project.context}
+              <p className="leading-relaxed text-foreground">
+                {project.intro}
               </p>
               <div className="flex gap-4 pt-2">
                 <Link

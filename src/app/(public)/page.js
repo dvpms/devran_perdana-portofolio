@@ -10,9 +10,11 @@ import {
 import ProjectCard from "@/components/public/ProjectCard";
 import SectionHeading from "@/components/public/SectionHeading";
 import { profile } from "@/data/profile";
-import { projects } from "@/data/projects";
+import { getFeaturedProjects } from "@/data/projects";
 
 export default function HomePage() {
+  const featuredProjects = getFeaturedProjects();
+
   return (
     <div className="space-y-20 pb-10">
       <section className="pt-4 md:pt-0">
@@ -125,7 +127,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid gap-6 sm:grid-cols-2">
-          {projects.map((project) => (
+          {featuredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
