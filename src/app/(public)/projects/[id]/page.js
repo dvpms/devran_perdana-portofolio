@@ -193,9 +193,10 @@ export default async function ProjectDetailPage({ params }) {
           <p className="mb-3 text-sm uppercase tracking-widest text-muted-foreground">
             Business Impact
           </p>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Real operational improvements.
           </h2>
+          <h3 className="mb-4 text-muted-foreground "> {project.impact}</h3>
         </div>
 
         <div className="grid gap-5 md:grid-cols-3">

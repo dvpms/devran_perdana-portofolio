@@ -93,7 +93,7 @@ export const projects = [
       "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-09_gqkxe9.png",
       "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-10_je7nne.png",
       "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-11_qnkono.png",
-      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-12_o2cr6f.png"
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-12_o2cr6f.png",
     ],
     link: "https://www.pangeranplaystation.my.id/",
     role: "Full Stack Developer",
@@ -168,43 +168,95 @@ export const projects = [
     ],
   },
   {
-    id: "otomatisasi-onboarding",
-    title: "Otomatisasi Pipeline Onboarding Karyawan",
-    category: "Workflow Automation",
-    featured: false,
-    image: "https://picsum.photos/seed/onboarding/1200/600",
-    link: "#",
-    role: "Automation Engineer",
+    id: "s-property-platform",
+    title: "S-Property Platform",
+    category: "Property Management Platform",
+    image: [
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-01_iwqqqf.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-02_ldwufl.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-03_g4llqm.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-4_pytsra.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-05_dbowus.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-06_s4wag5.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-07_o5kjsp.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-08_xrpvl7.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-09_ohpkfg.jpg",
+    ],
+    link: "https://s-property-web.vercel.app/",
+    featured: true,
+    role: "Lead Software Engineer / Full Stack Developer",
+
     contributions: [
-      "Mendesain workflow provisioning akses end-to-end yang otomatis dan terukur.",
-      "Mengintegrasikan Workday, Google Workspace, dan sistem internal via API.",
-      "Menambahkan guardrails (retry/idempotency) untuk mengurangi error operasional.",
+      "Merancang arsitektur dan workflow platform operasional perusahaan properti.",
+      "Mengembangkan website properti dan sistem operasional internal untuk perusahaan.",
+      "Membangun centralized WhatsApp communication dan mengintegrasikan Twilio untuk workflow komunikasi pelanggan.",
+      "Mengimplementasikan automation lead distribution workflow dan sistem data leads untuk tim sales.",
+      "Melakukan deployment, maintenance, dan pengembangan production system.",
     ],
+
     intro:
-      "Otomatisasi proses onboarding karyawan untuk mengurangi waktu dan usaha yang diperlukan dalam menyiapkan akun, akses sistem, dan dokumen legal.",
+      "Platform operasional digital untuk perusahaan properti yang mengintegrasikan website properti, manajemen lead, komunikasi WhatsApp terpusat, distribusi leads otomatis, dan workflow sales dalam satu ekosistem digital.",
+
     context:
-      "Perusahaan menghadapi tantangan dalam proses onboarding karyawan baru yang memakan waktu hingga 3 hari kerja, dengan risiko human error dalam pemberian akses sistem yang sensitif.",
+      "Sebelum sistem ini dikembangkan, pengelolaan lead, komunikasi pelanggan, dan workflow sales masih dilakukan secara manual dan berbasis spreadsheet. Tim sales dan admin perlu menangani data prospek, follow-up pelanggan, distribusi lead, komunikasi WhatsApp, monitoring aktivitas, hingga pengelolaan properti secara manual. Dengan operasional yang melibatkan perusahaan utama dan dua anak perusahaan, workflow manual ini berpotensi menyebabkan data lead tercecer, distribusi prospek yang lambat, dan sulitnya monitoring performa tim sales. Selain itu, perusahaan juga membutuhkan solusi komunikasi WhatsApp terpusat yang lebih fleksibel dan efisien dibanding menggunakan platform SaaS pihak ketiga dengan biaya operasional yang tinggi.",
+
     solution:
-      "Mengembangkan integrasi API antara sistem HRIS (Workday) dengan Google Workspace dan sistem akses internal menggunakan Python script yang diorkestrasi via GitHub Actions.",
+      "Saya membangun platform operasional digital untuk membantu perusahaan properti mengelola workflow sales, komunikasi pelanggan, dan distribusi lead secara lebih terpusat. Platform ini terdiri dari website properti, sistem manajemen lead, centralized WhatsApp communication, distribusi agent, dashboard operasional, monitoring aktivitas sales, serta sistem pengelolaan properti. Dengan membangun sistem internal sendiri, perusahaan dapat menyesuaikan workflow operasional sesuai kebutuhan bisnis sekaligus mengurangi ketergantungan terhadap platform SaaS pihak ketiga. Platform ini telah digunakan secara production oleh sekitar 50 karyawan dan mendukung operasional perusahaan utama beserta dua anak perusahaan.",
+
     highlights: [
-      "Integrasi Workday ke Google Workspace dan sistem internal.",
-      "Pipeline provisioning otomatis via GitHub Actions.",
-      "Template akses berbasis role untuk konsistensi permission.",
-      "Auditability lewat logging untuk tiap langkah provisioning.",
+      "Website properti sebagai media marketing dan akuisisi lead.",
+      "Master data lead untuk pengelolaan prospek secara terpusat.",
+      "Centralized WhatsApp communication dengan dukungan multi-number.",
+      "Automation lead distribution workflow untuk alokasi prospek kepada agent.",
+      "Agent registration dan team management untuk workflow operasional sales.",
+      "Role-based access management untuk admin, sales, dan team.",
+      "Property management module untuk mendukung sales dan marketing.",
+      "PWA support dan web push notification untuk mendukung operasional harian.",
+      "Operational ecosystem yang menggantikan workflow manual berbasis spreadsheet.",
+      "Sistem komunikasi internal yang lebih fleksibel dibanding SaaS pihak ketiga.",
     ],
+
     challenges: [
-      "Memastikan provisioning idempotent untuk mencegah duplikasi akun/akses.",
-      "Mengatur alur approval tanpa membuat proses menjadi kompleks.",
-      "Menangani error eksternal API dengan retry dan fallback yang aman.",
+      "Memusatkan komunikasi dari beberapa nomor WhatsApp bisnis ke dalam satu dashboard yang tetap mudah digunakan.",
+      "Mendesain workflow distribusi lead agar sesuai dengan kebutuhan operasional tim sales.",
+      "Menjaga data lead tetap rapi meskipun digunakan oleh banyak pengguna secara bersamaan.",
+      "Mengelola role dan akses pengguna berdasarkan struktur organisasi perusahaan.",
+      "Menyesuaikan kebutuhan operasional perusahaan utama dan dua anak perusahaan dalam satu platform.",
+      "Menjaga usability sistem agar tetap nyaman digunakan untuk operasional harian dengan skala sekitar 50 karyawan.",
     ],
+
     impact:
-      "Proses provisioning akses berkurang dari 3 hari menjadi 15 menit. Menghilangkan 100% human error dalam pemberian hak akses sensitif.",
+      "Platform ini membantu perusahaan memusatkan pengelolaan lead, komunikasi pelanggan, distribusi sales, dan workflow operasional dalam satu sistem digital. Dengan centralized communication dan automation lead distribution, tim sales dan admin dapat bekerja lebih terstruktur dan cepat, mengurangi risiko data prospek tercecer, serta meningkatkan konsistensi follow-up pelanggan. Sistem ini juga membantu perusahaan memiliki workflow komunikasi internal yang lebih fleksibel dan lebih efisien dibanding bergantung pada platform SaaS pihak ketiga.",
+
     impacts: [
-      { value: "15 menit", label: "Provisioning akses dari 3 hari" },
-      { value: "100%", label: "Eliminasi human error hak akses sensitif" },
-      { value: "Automated", label: "Pipeline onboarding end-to-end" },
+      {
+        value: "50+",
+        label: "Karyawan menggunakan sistem di production",
+      },
+      {
+        value: "3",
+        label: "Entitas perusahaan didukung dalam satu platform",
+      },
+      {
+        value: "Centralized",
+        label: "WhatsApp communication & lead management",
+      },
+      {
+        value: "Automated",
+        label: "Lead distribution workflow",
+      },
     ],
-    tech: ["Python", "GitHub Actions", "Workday API", "Google Workspace API"],
+
+    tech: [
+      "Next.js",
+      "Tailwind",
+      "Framer Motion",
+      "Redux Toolkit",
+      "MongoDB",
+      "Twilio",
+      "Cloudinary",
+      "+7 more",
+      ],
   },
 ];
 
