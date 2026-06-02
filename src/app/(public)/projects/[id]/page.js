@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft, FiExternalLink, FiLayers } from "react-icons/fi";
 import Badge from "@/components/public/Badge";
-import ProjectImageSlider from "@/components/public/ProjectImageSlider";
+import ImageSlide from "@/components/public/ImageSlide";
 import { getProjectById, projects } from "@/data/projects";
 
 export function generateStaticParams() {
@@ -69,7 +69,7 @@ export default async function ProjectDetailPage({ params }) {
         </div>
       </div>
 
-      <ProjectImageSlider images={images} title={project.title} />
+      <ImageSlide images={images} title={project.title} />
 
       <section
         className="animate-fade-in-up mt-8 flex flex-col items-center justify-between gap-4 rounded-md border border-border bg-surface p-6 opacity-0 sm:flex-row"

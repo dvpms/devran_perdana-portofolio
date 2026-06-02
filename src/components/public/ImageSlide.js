@@ -7,7 +7,7 @@ import { Pagination, Keyboard } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Lightbox from "yet-another-react-lightbox";
 
-export default function ProjectImageSlider({ images, title }) {
+export default function ImageSlide({ images, title }) {
   const swiperRef = useRef(null);
   const [lightboxIndex, setLightboxIndex] = useState(-1);
   const [isSwiperReady, setIsSwiperReady] = useState(false);
