@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FiArrowLeft } from "react-icons/fi";
 import Badge from "@/components/public/Badge";
+import ImageSlide from "@/components/public/ImageSlide";
 import { certifications, getCertificationById } from "@/data/certifications";
 
 export function generateStaticParams() {
@@ -49,19 +50,7 @@ export default async function CertificationDetailPage({ params }) {
         </p>
       </div>
 
-      <div
-        className="animate-fade-in-up overflow-hidden rounded-md border border-border opacity-0"
-        style={{ animationDelay: "200ms", animationFillMode: "forwards" }}
-      >
-        <Image
-          alt={certification.title}
-          className="h-auto max-h-[450px] w-full object-cover"
-          height={600}
-          priority
-          src={certification.image}
-          width={800}
-        />
-      </div>
+      <ImageSlide images={certification.image} title={certification.title} />
 
       <div className="mt-8 space-y-8 text-foreground">
         <section
