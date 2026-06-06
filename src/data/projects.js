@@ -259,71 +259,71 @@ export const projects = [
       ],
   },
   {
-  id: "mini-erp-saas",
-  title: "Mini ERP SaaS",
-  category: "Multi-Tenant Business Management System",
-  image: "https://picsum.photos/seed/minierpsaas/1200/600",
-  link: "#",
-  role: "Full Stack Developer",
-
-  contributions: [
-    "Designed and implemented a multi-tenant SaaS architecture using Laravel and Vue.js.",
-    "Built authentication, role-based access control, and tenant data isolation.",
-    "Developed product, transaction, and reporting modules.",
-    "Implemented transaction price snapshot to preserve historical data integrity.",
-    "Created reusable frontend design system with Tailwind CSS.",
-    "Built API testing and automated feature tests for critical business rules."
-  ],
-
-  intro:
-    "A multi-tenant ERP SaaS application that helps businesses manage products, transactions, and operational reporting through a secure, role-based platform.",
-
-  context:
-    "The project was built to demonstrate how a SaaS application can support multiple organizations within a single platform while maintaining strict data isolation, security, and transaction integrity.",
-
-  solution:
-    "I developed a full-stack ERP application using Laravel and Vue.js with multi-tenant architecture, role-based permissions, transaction management, reporting dashboards, and automated testing. The system includes tenant isolation, historical transaction tracking, and interactive reporting with chart visualization.",
-
-  highlights: [
-    "Multi-tenant shared database architecture",
-    "Role-based access control (Owner & Staff)",
-    "Product and transaction management",
-    "Historical price snapshot tracking",
-    "Revenue reporting with interactive charts",
-    "Tailwind CSS design system",
-    "Postman collection and automated feature testing"
-  ],
-
-  challenges: [
-    "Preventing cross-tenant data access",
-    "Maintaining transaction history despite product price changes",
-    "Designing scalable authorization rules",
-    "Generating report charts with complete date ranges, including empty dates"
-  ],
-
-  impact:
-    "Demonstrates full-stack development capabilities beyond CRUD by incorporating multi-tenancy, authorization, reporting, automated testing, documentation, and software engineering best practices.",
-
-  impacts: [
+    id: "mini-erp-saas",
+    title: "Mini ERP SaaS",
+    category: "Sistem Manajemen Bisnis Multi-Tenant",
+    image: ["https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-01_kdndor.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745211/image-02_sxg7nh.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-03_muwvfc.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-04_mb9dfx.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-05_es5u7a.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-06_jpr8kf.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-07_sxhbfw.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-08_ps2q40.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-09_ve2l9o.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-10_uwmqpj.jpg"],
+    link: "#",
+    role: "Full Stack Developer",
+    
+    contributions: [
+      "Merancang dan mengimplementasikan arsitektur aplikasi SaaS multi-tenant menggunakan Laravel dan Vue.js.",
+      "Membangun sistem autentikasi, role-based access control, dan isolasi data antar tenant.",
+      "Mengembangkan modul manajemen produk, transaksi, dan pelaporan.",
+      "Mengimplementasikan price snapshot pada transaksi untuk menjaga integritas data historis.",
+      "Membangun design system frontend menggunakan Tailwind CSS.",
+      "Menyusun dokumentasi teknis serta automated testing untuk memastikan kualitas sistem."
+    ],
+    
+    intro:
+    "Aplikasi ERP berbasis SaaS yang membantu bisnis mengelola produk, transaksi, dan laporan operasional melalui platform multi-tenant yang aman dan terstruktur.",
+    
+    context:
+    "Proyek ini dikembangkan untuk mensimulasikan kebutuhan aplikasi SaaS modern yang mampu melayani banyak organisasi dalam satu platform, dengan fokus pada keamanan data, kontrol akses, dan konsistensi transaksi.",
+    
+    solution:
+    "Saya membangun aplikasi full-stack menggunakan Laravel dan Vue.js yang mendukung multi-tenant architecture, role-based permissions, manajemen produk, transaksi, serta dashboard laporan dengan visualisasi data. Sistem juga dilengkapi dengan tenant isolation, historical transaction tracking, dan automated testing.",
+    
+    highlights: [
+      "Arsitektur SaaS multi-tenant dengan shared database",
+      "Role-based access control (Owner & Staff)",
+      "Manajemen produk dan transaksi",
+      "Price snapshot untuk menjaga akurasi data historis",
+      "Dashboard laporan dengan visualisasi grafik",
+      "Design system berbasis Tailwind CSS",
+      "Postman Collection dan Laravel Feature Tests"
+    ],
+    
+    challenges: [
+      "Menjaga isolasi data antar tenant dalam satu database.",
+      "Memastikan histori transaksi tetap akurat meskipun harga produk berubah.",
+      "Merancang sistem otorisasi yang sederhana namun aman.",
+      "Menyajikan laporan dan grafik berdasarkan rentang tanggal yang dipilih pengguna."
+    ],
+    
+    impact:
+    "Proyek ini menunjukkan kemampuan membangun aplikasi full-stack yang tidak hanya berfokus pada CRUD, tetapi juga mencakup arsitektur multi-tenant, keamanan data, pelaporan, dokumentasi, dan praktik software engineering yang baik.",
+    
+    impacts: [
     {
-      value: "Multi-Tenant",
-      label: "Data isolation architecture"
+    value: "Multi-Tenant",
+    label: "Arsitektur isolasi data"
     },
     {
-      value: "Role-Based",
-      label: "Owner & Staff permissions"
+    value: "2 Role",
+    label: "Owner & Staff"
     },
     {
-      value: "Tested",
-      label: "Postman & Feature Tests"
+    value: "Tested",
+    label: "Postman & Feature Tests"
     },
     {
-      value: "Full Stack",
-      label: "Laravel + Vue.js"
+    value: "Full Stack",
+    label: "Laravel & Vue.js"
     }
-  ],
-
-  tech: [
+    ],
+    
+    tech: [
     "Laravel",
     "Laravel Sanctum",
     "MySQL",
@@ -336,8 +336,9 @@ export const projects = [
     "SweetAlert2",
     "Postman",
     "PHPUnit"
-  ]
-}
+    ]
+    }
+
 ];
 
 export function getProjectById(projectId) {
