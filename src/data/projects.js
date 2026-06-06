@@ -258,6 +258,86 @@ export const projects = [
       "+7 more",
       ],
   },
+  {
+  id: "mini-erp-saas",
+  title: "Mini ERP SaaS",
+  category: "Multi-Tenant Business Management System",
+  image: "https://picsum.photos/seed/minierpsaas/1200/600",
+  link: "#",
+  role: "Full Stack Developer",
+
+  contributions: [
+    "Designed and implemented a multi-tenant SaaS architecture using Laravel and Vue.js.",
+    "Built authentication, role-based access control, and tenant data isolation.",
+    "Developed product, transaction, and reporting modules.",
+    "Implemented transaction price snapshot to preserve historical data integrity.",
+    "Created reusable frontend design system with Tailwind CSS.",
+    "Built API testing and automated feature tests for critical business rules."
+  ],
+
+  intro:
+    "A multi-tenant ERP SaaS application that helps businesses manage products, transactions, and operational reporting through a secure, role-based platform.",
+
+  context:
+    "The project was built to demonstrate how a SaaS application can support multiple organizations within a single platform while maintaining strict data isolation, security, and transaction integrity.",
+
+  solution:
+    "I developed a full-stack ERP application using Laravel and Vue.js with multi-tenant architecture, role-based permissions, transaction management, reporting dashboards, and automated testing. The system includes tenant isolation, historical transaction tracking, and interactive reporting with chart visualization.",
+
+  highlights: [
+    "Multi-tenant shared database architecture",
+    "Role-based access control (Owner & Staff)",
+    "Product and transaction management",
+    "Historical price snapshot tracking",
+    "Revenue reporting with interactive charts",
+    "Tailwind CSS design system",
+    "Postman collection and automated feature testing"
+  ],
+
+  challenges: [
+    "Preventing cross-tenant data access",
+    "Maintaining transaction history despite product price changes",
+    "Designing scalable authorization rules",
+    "Generating report charts with complete date ranges, including empty dates"
+  ],
+
+  impact:
+    "Demonstrates full-stack development capabilities beyond CRUD by incorporating multi-tenancy, authorization, reporting, automated testing, documentation, and software engineering best practices.",
+
+  impacts: [
+    {
+      value: "Multi-Tenant",
+      label: "Data isolation architecture"
+    },
+    {
+      value: "Role-Based",
+      label: "Owner & Staff permissions"
+    },
+    {
+      value: "Tested",
+      label: "Postman & Feature Tests"
+    },
+    {
+      value: "Full Stack",
+      label: "Laravel + Vue.js"
+    }
+  ],
+
+  tech: [
+    "Laravel",
+    "Laravel Sanctum",
+    "MySQL",
+    "Vue 3",
+    "Pinia",
+    "Vue Router",
+    "Axios",
+    "Tailwind CSS",
+    "Chart.js",
+    "SweetAlert2",
+    "Postman",
+    "PHPUnit"
+  ]
+}
 ];
 
 export function getProjectById(projectId) {
