@@ -260,10 +260,11 @@ export const projects = [
   },
   {
     id: "mini-erp-saas",
-    title: "Mini ERP SaaS",
+    title: "ERP SaaS",
     category: "Sistem Manajemen Bisnis Multi-Tenant",
     image: ["https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-01_kdndor.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745211/image-02_sxg7nh.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-03_muwvfc.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-04_mb9dfx.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-05_es5u7a.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-06_jpr8kf.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-07_sxhbfw.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-08_ps2q40.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-09_ve2l9o.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-10_uwmqpj.jpg"],
     link: "#",
+    featured: true,
     role: "Full Stack Developer",
     
     contributions: [
@@ -338,6 +339,82 @@ export const projects = [
     "PHPUnit"
     ]
     },
+  {
+  id: "wushu-tournament-system",
+  title: "Wushu Tournament System",
+  category: "Tournament Management Platform",
+  image: ["https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-01_up6ixx.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-02_kekojs.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-03_hrn5rh.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-04_pyg8pa.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-05_aprcs6.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-06_zx3e7p.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-07_eg29ry.jpg",
+         ],
+  link: "https://www.bupaticup.site/",
+  role: "Full Stack Developer",
+
+  contributions: [
+    "Merancang workflow digital untuk pengelolaan turnamen wushu.",
+    "Membangun sistem pendaftaran peserta dan kontingen.",
+    "Mengembangkan dashboard admin untuk validasi data dan pembayaran.",
+    "Mendesain struktur database untuk mengelola relasi atlet, kontingen, kategori, dan pertandingan.",
+    "Membantu menyederhanakan proses rekapitulasi data turnamen yang sebelumnya dilakukan secara manual."
+  ],
+
+  intro:
+    "Platform manajemen turnamen wushu untuk membantu proses pendaftaran, validasi peserta, pembayaran, dan rekapitulasi data pertandingan menjadi lebih terstruktur.",
+
+  context:
+    "Sebelum sistem ini dibuat, pengelolaan data turnamen masih banyak dilakukan secara manual, mulai dari pendaftaran atlet, pendataan kontingen, validasi pembayaran, hingga penyusunan data pertandingan. Proses manual ini berisiko menyebabkan data tercecer, kesalahan rekapitulasi, dan memperlambat proses administrasi turnamen.",
+
+  solution:
+    "Saya membangun platform manajemen turnamen berbasis web untuk membantu panitia mengelola pendaftaran atlet, data kontingen, validasi pembayaran, dan rekapitulasi informasi pertandingan dalam satu sistem terpusat. Dengan pendekatan ini, proses administrasi turnamen menjadi lebih rapi, mudah dipantau, dan mengurangi ketergantungan pada pencatatan manual.",
+
+  highlights: [
+    "Sistem pendaftaran atlet dan kontingen.",
+    "Dashboard admin untuk monitoring data peserta.",
+    "Validasi pembayaran peserta.",
+    "Pengelolaan data kategori dan kelas pertandingan.",
+    "Struktur database relasional untuk atlet, kontingen, dan pertandingan.",
+    "Rekapitulasi data turnamen dalam satu platform.",
+    "Workflow administrasi yang lebih terpusat."
+  ],
+
+  challenges: [
+    "Mendesain struktur data yang mampu menghubungkan atlet, kontingen, kelas pertandingan, dan status pembayaran.",
+    "Menyederhanakan workflow administrasi agar mudah digunakan oleh panitia.",
+    "Mengurangi risiko kesalahan data akibat proses rekapitulasi manual.",
+    "Membuat sistem yang dapat membantu panitia memantau status peserta dan pembayaran secara lebih cepat."
+  ],
+
+  impact:
+    "Sistem ini membantu panitia memusatkan proses administrasi turnamen dalam satu platform digital. Pengelolaan data atlet, kontingen, pembayaran, dan rekapitulasi menjadi lebih terstruktur sehingga mengurangi risiko data tercecer dan mempercepat proses validasi administrasi.",
+
+  impacts: [
+    {
+      value: "Centralized",
+      label: "Data atlet, kontingen, dan pembayaran"
+    },
+    {
+      value: "Structured",
+      label: "Workflow administrasi turnamen"
+    },
+    {
+      value: "Reduced",
+      label: "Risiko kesalahan rekapitulasi manual"
+    }
+  ],
+
+  tech: [
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "Supabase",
+    "Tailwind CSS",
+    "Vercel"
+  ]
+},
   {
   id: "raos-saji-digital-catalog",
   title: "Raos Saji",
