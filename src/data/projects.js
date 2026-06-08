@@ -337,7 +337,79 @@ export const projects = [
     "Postman",
     "PHPUnit"
     ]
+    },
+  {
+  id: "raos-saji-digital-catalog",
+  title: "Raos Saji",
+  category: "Digital Product Catalog",
+  image: [
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-01_z9dkyr.jpg",
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-02_tygoyh.jpg",
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-03_t90dcb.jpg",
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-04_gyigm0.jpg"
+  ],
+  link: "https://raos-saji-web.vercel.app/",
+  role: "Frontend Developer",
+
+  contributions: [
+    "Merancang struktur informasi website satu halaman.",
+    "Mengembangkan landing page dan katalog produk kuliner.",
+    "Mengimplementasikan responsive user interface.",
+    "Menampilkan kategori produk, harga, dan informasi kontak dalam satu halaman.",
+    "Melakukan deployment website ke Vercel."
+  ],
+
+  intro:
+    "Website katalog produk digital untuk membantu brand kuliner menampilkan produk, harga, dan informasi kontak secara lebih profesional dalam satu halaman.",
+
+  context:
+    "Klien membutuhkan media digital sederhana untuk menampilkan produk kuliner dan memperkenalkan brand kepada pelanggan secara lebih rapi dibanding hanya mengandalkan media sosial atau komunikasi langsung.",
+
+  solution:
+    "Saya membangun landing page responsif yang berfungsi sebagai katalog produk digital. Website ini menampilkan profil singkat brand, keunggulan produk, kategori menu, harga produk, serta kanal kontak melalui WhatsApp dan Instagram agar pelanggan lebih mudah menemukan informasi dan menghubungi pemilik usaha.",
+
+  highlights: [
+    "One-page landing page untuk brand kuliner.",
+    "Product catalog showcase berdasarkan kategori menu.",
+    "Informasi harga produk yang mudah dibaca.",
+    "Brand storytelling section untuk memperkenalkan bisnis.",
+    "Contact section dengan akses ke WhatsApp dan Instagram.",
+    "Responsive layout untuk desktop dan mobile.",
+    "Deployment menggunakan Vercel."
+  ],
+
+  challenges: [
+    "Menampilkan beberapa kategori produk tanpa membuat halaman terasa terlalu padat.",
+    "Menjaga konsistensi visual agar sesuai dengan identitas brand kuliner.",
+    "Membuat katalog produk tetap mudah dibaca di perangkat mobile.",
+    "Mengarahkan pengguna menuju kontak pemesanan dengan alur yang sederhana."
+  ],
+
+  impact:
+    "Website ini membantu memusatkan informasi produk Raos Saji dalam satu halaman digital yang mudah diakses. Pelanggan dapat melihat profil brand, daftar produk, harga, dan kontak pemesanan tanpa harus mencari informasi secara terpisah.",
+
+  impacts: [
+    {
+      value: "1 Page",
+      label: "Landing page katalog produk"
+    },
+    {
+      value: "3+",
+      label: "Kategori produk ditampilkan"
+    },
+    {
+      value: "Direct",
+      label: "Akses kontak WhatsApp dan Instagram"
     }
+  ],
+
+  tech: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Vercel"
+  ]
+}
 
 ];
 
