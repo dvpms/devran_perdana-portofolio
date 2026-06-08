@@ -264,7 +264,6 @@ export const projects = [
     category: "Sistem Manajemen Bisnis Multi-Tenant",
     image: ["https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-01_kdndor.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745211/image-02_sxg7nh.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-03_muwvfc.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-04_mb9dfx.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-05_es5u7a.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-06_jpr8kf.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-07_sxhbfw.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-08_ps2q40.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-09_ve2l9o.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-10_uwmqpj.jpg"],
     link: "#",
-    featured: true,
     role: "Full Stack Developer",
     
     contributions: [
@@ -352,6 +351,7 @@ export const projects = [
           "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-07_eg29ry.jpg",
          ],
   link: "https://www.bupaticup.site/",
+  featured: true,
   role: "Full Stack Developer",
 
   contributions: [
