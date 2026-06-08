@@ -9,7 +9,7 @@ export const profile = {
   heading: "Membangun Sistem untuk Mengatasi Masalah Bisnis",
   subheading: "Full Stack Developer yang fokus membangun sistem digital untuk membantu bisnis bekerja lebih efisien.", 
   tagline:
-    "Dibangun dengan tujuan. Memberikan dampak nyata",
+    "Build with Intent, Real Impact",
   // focus:
   //   "Saat ini sedang mendalami arsitektur Event-Driven menggunakan Kafka untuk optimasi microservices, dan terbuka untuk peluang kerja sebagai Senior Full Stack Developer.",
   socials: [
