@@ -258,6 +258,236 @@ export const projects = [
       "+7 more",
       ],
   },
+  {
+    id: "mini-erp-saas",
+    title: "ERP SaaS",
+    category: "Sistem Manajemen Bisnis Multi-Tenant",
+    image: ["https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-01_kdndor.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745211/image-02_sxg7nh.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-03_muwvfc.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-04_mb9dfx.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-05_es5u7a.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-06_jpr8kf.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-07_sxhbfw.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-08_ps2q40.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-09_ve2l9o.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-10_uwmqpj.jpg"],
+    link: "#",
+    role: "Full Stack Developer",
+    
+    contributions: [
+      "Merancang dan mengimplementasikan arsitektur aplikasi SaaS multi-tenant menggunakan Laravel dan Vue.js.",
+      "Membangun sistem autentikasi, role-based access control, dan isolasi data antar tenant.",
+      "Mengembangkan modul manajemen produk, transaksi, dan pelaporan.",
+      "Mengimplementasikan price snapshot pada transaksi untuk menjaga integritas data historis.",
+      "Membangun design system frontend menggunakan Tailwind CSS.",
+      "Menyusun dokumentasi teknis serta automated testing untuk memastikan kualitas sistem."
+    ],
+    
+    intro:
+    "Aplikasi ERP berbasis SaaS yang membantu bisnis mengelola produk, transaksi, dan laporan operasional melalui platform multi-tenant yang aman dan terstruktur.",
+    
+    context:
+    "Proyek ini dikembangkan untuk mensimulasikan kebutuhan aplikasi SaaS modern yang mampu melayani banyak organisasi dalam satu platform, dengan fokus pada keamanan data, kontrol akses, dan konsistensi transaksi.",
+    
+    solution:
+    "Saya membangun aplikasi full-stack menggunakan Laravel dan Vue.js yang mendukung multi-tenant architecture, role-based permissions, manajemen produk, transaksi, serta dashboard laporan dengan visualisasi data. Sistem juga dilengkapi dengan tenant isolation, historical transaction tracking, dan automated testing.",
+    
+    highlights: [
+      "Arsitektur SaaS multi-tenant dengan shared database",
+      "Role-based access control (Owner & Staff)",
+      "Manajemen produk dan transaksi",
+      "Price snapshot untuk menjaga akurasi data historis",
+      "Dashboard laporan dengan visualisasi grafik",
+      "Design system berbasis Tailwind CSS",
+      "Postman Collection dan Laravel Feature Tests"
+    ],
+    
+    challenges: [
+      "Menjaga isolasi data antar tenant dalam satu database.",
+      "Memastikan histori transaksi tetap akurat meskipun harga produk berubah.",
+      "Merancang sistem otorisasi yang sederhana namun aman.",
+      "Menyajikan laporan dan grafik berdasarkan rentang tanggal yang dipilih pengguna."
+    ],
+    
+    impact:
+    "Proyek ini menunjukkan kemampuan membangun aplikasi full-stack yang tidak hanya berfokus pada CRUD, tetapi juga mencakup arsitektur multi-tenant, keamanan data, pelaporan, dokumentasi, dan praktik software engineering yang baik.",
+    
+    impacts: [
+    {
+    value: "Multi-Tenant",
+    label: "Arsitektur isolasi data"
+    },
+    {
+    value: "2 Role",
+    label: "Owner & Staff"
+    },
+    {
+    value: "Tested",
+    label: "Postman & Feature Tests"
+    },
+    {
+    value: "Full Stack",
+    label: "Laravel & Vue.js"
+    }
+    ],
+    
+    tech: [
+    "Laravel",
+    "Laravel Sanctum",
+    "MySQL",
+    "Vue 3",
+    "Pinia",
+    "Vue Router",
+    "Axios",
+    "Tailwind CSS",
+    "Chart.js",
+    "SweetAlert2",
+    "Postman",
+    "PHPUnit"
+    ]
+    },
+  {
+  id: "wushu-tournament-system",
+  title: "Wushu Tournament System",
+  category: "Tournament Management Platform",
+  image: ["https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-01_up6ixx.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-02_kekojs.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-03_hrn5rh.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-04_pyg8pa.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-05_aprcs6.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-06_zx3e7p.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-07_eg29ry.jpg",
+         ],
+  link: "https://www.bupaticup.site/",
+  featured: true,
+  role: "Full Stack Developer",
+
+  contributions: [
+    "Merancang workflow digital untuk pengelolaan turnamen wushu.",
+    "Membangun sistem pendaftaran peserta dan kontingen.",
+    "Mengembangkan dashboard admin untuk validasi data dan pembayaran.",
+    "Mendesain struktur database untuk mengelola relasi atlet, kontingen, kategori, dan pertandingan.",
+    "Membantu menyederhanakan proses rekapitulasi data turnamen yang sebelumnya dilakukan secara manual."
+  ],
+
+  intro:
+    "Platform manajemen turnamen wushu untuk membantu proses pendaftaran, validasi peserta, pembayaran, dan rekapitulasi data pertandingan menjadi lebih terstruktur.",
+
+  context:
+    "Sebelum sistem ini dibuat, pengelolaan data turnamen masih banyak dilakukan secara manual, mulai dari pendaftaran atlet, pendataan kontingen, validasi pembayaran, hingga penyusunan data pertandingan. Proses manual ini berisiko menyebabkan data tercecer, kesalahan rekapitulasi, dan memperlambat proses administrasi turnamen.",
+
+  solution:
+    "Saya membangun platform manajemen turnamen berbasis web untuk membantu panitia mengelola pendaftaran atlet, data kontingen, validasi pembayaran, dan rekapitulasi informasi pertandingan dalam satu sistem terpusat. Dengan pendekatan ini, proses administrasi turnamen menjadi lebih rapi, mudah dipantau, dan mengurangi ketergantungan pada pencatatan manual.",
+
+  highlights: [
+    "Sistem pendaftaran atlet dan kontingen.",
+    "Dashboard admin untuk monitoring data peserta.",
+    "Validasi pembayaran peserta.",
+    "Pengelolaan data kategori dan kelas pertandingan.",
+    "Struktur database relasional untuk atlet, kontingen, dan pertandingan.",
+    "Rekapitulasi data turnamen dalam satu platform.",
+    "Workflow administrasi yang lebih terpusat."
+  ],
+
+  challenges: [
+    "Mendesain struktur data yang mampu menghubungkan atlet, kontingen, kelas pertandingan, dan status pembayaran.",
+    "Menyederhanakan workflow administrasi agar mudah digunakan oleh panitia.",
+    "Mengurangi risiko kesalahan data akibat proses rekapitulasi manual.",
+    "Membuat sistem yang dapat membantu panitia memantau status peserta dan pembayaran secara lebih cepat."
+  ],
+
+  impact:
+    "Sistem ini membantu panitia memusatkan proses administrasi turnamen dalam satu platform digital. Pengelolaan data atlet, kontingen, pembayaran, dan rekapitulasi menjadi lebih terstruktur sehingga mengurangi risiko data tercecer dan mempercepat proses validasi administrasi.",
+
+  impacts: [
+    {
+      value: "Centralized",
+      label: "Data atlet, kontingen, dan pembayaran"
+    },
+    {
+      value: "Structured",
+      label: "Workflow administrasi turnamen"
+    },
+    {
+      value: "Reduced",
+      label: "Risiko kesalahan rekapitulasi manual"
+    }
+  ],
+
+  tech: [
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "Supabase",
+    "Tailwind CSS",
+    "Vercel"
+  ]
+},
+  {
+  id: "raos-saji-digital-catalog",
+  title: "Raos Saji",
+  category: "Digital Product Catalog",
+  image: [
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-01_z9dkyr.jpg",
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-02_tygoyh.jpg",
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-03_t90dcb.jpg",
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-04_gyigm0.jpg"
+  ],
+  link: "https://raos-saji-web.vercel.app/",
+  role: "Frontend Developer",
+
+  contributions: [
+    "Merancang struktur informasi website satu halaman.",
+    "Mengembangkan landing page dan katalog produk kuliner.",
+    "Mengimplementasikan responsive user interface.",
+    "Menampilkan kategori produk, harga, dan informasi kontak dalam satu halaman.",
+    "Melakukan deployment website ke Vercel."
+  ],
+
+  intro:
+    "Website katalog produk digital untuk membantu brand kuliner menampilkan produk, harga, dan informasi kontak secara lebih profesional dalam satu halaman.",
+
+  context:
+    "Klien membutuhkan media digital sederhana untuk menampilkan produk kuliner dan memperkenalkan brand kepada pelanggan secara lebih rapi dibanding hanya mengandalkan media sosial atau komunikasi langsung.",
+
+  solution:
+    "Saya membangun landing page responsif yang berfungsi sebagai katalog produk digital. Website ini menampilkan profil singkat brand, keunggulan produk, kategori menu, harga produk, serta kanal kontak melalui WhatsApp dan Instagram agar pelanggan lebih mudah menemukan informasi dan menghubungi pemilik usaha.",
+
+  highlights: [
+    "One-page landing page untuk brand kuliner.",
+    "Product catalog showcase berdasarkan kategori menu.",
+    "Informasi harga produk yang mudah dibaca.",
+    "Brand storytelling section untuk memperkenalkan bisnis.",
+    "Contact section dengan akses ke WhatsApp dan Instagram.",
+    "Responsive layout untuk desktop dan mobile.",
+    "Deployment menggunakan Vercel."
+  ],
+
+  challenges: [
+    "Menampilkan beberapa kategori produk tanpa membuat halaman terasa terlalu padat.",
+    "Menjaga konsistensi visual agar sesuai dengan identitas brand kuliner.",
+    "Membuat katalog produk tetap mudah dibaca di perangkat mobile.",
+    "Mengarahkan pengguna menuju kontak pemesanan dengan alur yang sederhana."
+  ],
+
+  impact:
+    "Website ini membantu memusatkan informasi produk Raos Saji dalam satu halaman digital yang mudah diakses. Pelanggan dapat melihat profil brand, daftar produk, harga, dan kontak pemesanan tanpa harus mencari informasi secara terpisah.",
+
+  impacts: [
+    {
+      value: "1 Page",
+      label: "Landing page katalog produk"
+    },
+    {
+      value: "3+",
+      label: "Kategori produk ditampilkan"
+    },
+    {
+      value: "Direct",
+      label: "Akses kontak WhatsApp dan Instagram"
+    }
+  ],
+
+  tech: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Vercel"
+  ]
+}
+
 ];
 
 export function getProjectById(projectId) {
