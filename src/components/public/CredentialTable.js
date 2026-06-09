@@ -1,12 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { FiBookOpen, FiAward } from "react-icons/fi";
+import { useLanguage } from "@/context/LanguageContext";
 
 const credentialIcons = {
-  Sertifikasi: FiAward,
-  Pelatihan: FiBookOpen,
+  certification: FiAward,
+  training: FiBookOpen,
 };
 
 export default function CredentialTable({ credentials, title, type }) {
+  const { t } = useLanguage();
   const Icon = credentialIcons[type] ?? FiAward;
 
   return (
@@ -16,9 +20,9 @@ export default function CredentialTable({ credentials, title, type }) {
         <table className="w-full min-w-[500px] border-collapse text-left text-sm">
           <thead className="bg-muted">
             <tr className="border-b border-border text-muted-foreground">
-              <th className="w-1/2 px-4 py-3 font-medium">Nama Program</th>
-              <th className="px-4 py-3 font-medium">Penyelenggara</th>
-              <th className="w-24 px-4 py-3 font-medium">Tahun</th>
+              <th className="w-1/2 px-4 py-3 font-medium">{t.credentialTable.programName}</th>
+              <th className="px-4 py-3 font-medium">{t.credentialTable.organizer}</th>
+              <th className="w-24 px-4 py-3 font-medium">{t.credentialTable.year}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
@@ -43,4 +47,3 @@ export default function CredentialTable({ credentials, title, type }) {
     </section>
   );
 }
-

@@ -40,3 +40,6 @@ export const en_profile = {
   ],
 };
 
+export function getLocalizedProfile(locale) {
+  return locale === "en" ? en_profile : profile;
+}

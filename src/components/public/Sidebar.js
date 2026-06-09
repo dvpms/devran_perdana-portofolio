@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  FiBookOpen,
   FiBriefcase,
   FiFileText,
   FiHome,
@@ -13,15 +12,19 @@ import {
   FiUser,
   FiX,
 } from "react-icons/fi";
-import { profile } from "@/data/profile";
+import { useLanguage } from "@/context/LanguageContext";
+import { getLocalizedProfile } from "@/data/profile";
+import LanguageSwitcher from "./LanguageSwitcher";
 import SocialIcon from "./SocialIcon";
 
-const navItems = [
-  { href: "/", label: "Home", icon: FiHome },
-  { href: "/about", label: "About", icon: FiUser },
-  { href: "/projects", label: "Projects", icon: FiBriefcase },
-  { href: "/resume", label: "Resume", icon: FiFileText },
-];
+function getNavItems(t) {
+  return [
+    { href: "/", label: t.nav.home, icon: FiHome },
+    { href: "/about", label: t.nav.about, icon: FiUser },
+    { href: "/projects", label: t.nav.projects, icon: FiBriefcase },
+    { href: "/resume", label: t.nav.resume, icon: FiFileText },
+  ];
+}
 
 function getIsActive(pathname, href) {
   if (href === "/") {
@@ -33,12 +36,15 @@ function getIsActive(pathname, href) {
 
 export default function Sidebar({ isOpen, onClose }) {
   const pathname = usePathname();
+  const { locale, t } = useLanguage();
+  const profile = getLocalizedProfile(locale);
+  const navItems = getNavItems(t);
 
   return (
     <>
       {isOpen ? (
         <button
-          aria-label="Tutup navigasi"
+          aria-label={t.a11y.closeNav}
           className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm md:hidden"
           onClick={onClose}
           type="button"
@@ -65,7 +71,7 @@ export default function Sidebar({ isOpen, onClose }) {
             className="rounded-sm p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             onClick={onClose}
             type="button"
-            aria-label="Tutup menu"
+            aria-label={t.a11y.closeMenu}
           >
             <FiX className="h-5 w-5" aria-hidden="true" />
           </button>
@@ -116,6 +122,10 @@ export default function Sidebar({ isOpen, onClose }) {
               </Link>
             );
           })}
+
+          <div className="mt-4 px-3">
+            <LanguageSwitcher />
+          </div>
         </nav>
 
         <div

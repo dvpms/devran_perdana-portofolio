@@ -1,7 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
-  FiArrowDown,
   FiArrowRight,
   FiBriefcase,
   FiDownload,
@@ -9,11 +10,14 @@ import {
 } from "react-icons/fi";
 import ProjectCard from "@/components/public/ProjectCard";
 import SectionHeading from "@/components/public/SectionHeading";
-import { profile } from "@/data/profile";
+import { getLocalizedProfile } from "@/data/profile";
 import { getFeaturedProjects } from "@/data/projects";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function HomePage() {
-  const featuredProjects = getFeaturedProjects();
+  const { locale, t } = useLanguage();
+  const profile = getLocalizedProfile(locale);
+  const featuredProjects = getFeaturedProjects(locale);
 
   return (
     <div className="space-y-20 pb-10">
@@ -34,7 +38,7 @@ export default function HomePage() {
                 className="group flex items-center bg-black gap-2 rounded-md border border-border px-4 py-2 text-sm font-medium transition-all hover:bg-black/80 hover:shadow-sm scale-100 hover:scale-95"
                 href="/projects"
               >
-                Lihat Proyek
+                {t.home.viewProjects}
                 <FiArrowRight
                   className="h-4 w-4 transition-transform group-hover:translate-y-1"
                   aria-hidden="true"
@@ -45,7 +49,7 @@ export default function HomePage() {
                 download
                 href="/resume.pdf"
               >
-                Download CV
+                {t.home.downloadCV}
                 <FiDownload
                   className="h-4 w-4 transition-transform group-hover:-translate-y-0.5"
                   aria-hidden="true"
@@ -64,7 +68,7 @@ export default function HomePage() {
                 aria-hidden="true"
               />
               <Image
-                alt={`Foto profil ${profile.name}`}
+                alt={`${t.a11y.profilePhoto} ${profile.name}`}
                 className="absolute bottom-0 left-1/2 z-10 h-full w-full -translate-x-1/2 scale-125 object-contain md:scale-[1.15]"
                 height={560}
                 priority
@@ -92,7 +96,7 @@ export default function HomePage() {
               {
                 <div className="space-y-2">
                   <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                    Current Focus
+                    {t.home.currentFocus}
                   </h2>
                   <p className="leading-relaxed text-foreground">
                     {profile.focus}
@@ -114,12 +118,12 @@ export default function HomePage() {
         style={{ animationDelay: "500ms", animationFillMode: "forwards" }}
       >
         <div className="flex items-center justify-between">
-          <SectionHeading icon={FiBriefcase} title="Highlight Proyek" />
+          <SectionHeading icon={FiBriefcase} title={t.home.projectHighlights} />
           <Link
             className="text-md text-black transition-colors hover:text-foreground"
             href="/projects"
           >
-            Lihat Semua
+            {t.home.viewAll}
             <FiArrowRight
               className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1 hidden md:inline-block"
               aria-hidden="true"
