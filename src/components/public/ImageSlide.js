@@ -6,11 +6,13 @@ import { FiChevronLeft, FiChevronRight, FiMaximize2 } from "react-icons/fi";
 import { Pagination, Keyboard } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Lightbox from "yet-another-react-lightbox";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ImageSlide({ images, title }) {
   const swiperRef = useRef(null);
   const [lightboxIndex, setLightboxIndex] = useState(-1);
   const [isSwiperReady, setIsSwiperReady] = useState(false);
+  const { t } = useLanguage();
 
   const slideImages = useMemo(() => {
     if (Array.isArray(images)) {
@@ -58,7 +60,7 @@ export default function ImageSlide({ images, title }) {
           {slideImages.map((image, index) => (
             <SwiperSlide key={`${title}-${index}`}>
               <button
-                aria-label={`Buka ${title} slide ${index + 1} full screen`}
+                aria-label={`${t.a11y.openFullScreen} — ${title} slide ${index + 1}`}
                 className="group relative block w-full cursor-zoom-in"
                 onClick={() => setLightboxIndex(index)}
                 type="button"
@@ -75,7 +77,7 @@ export default function ImageSlide({ images, title }) {
                   <div className="absolute inset-0 bg-linear-to-t from-black/30 via-black/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <span className="absolute right-4 top-4 inline-flex items-center gap-2 rounded-full border border-border bg-background/90 px-3 py-1.5 text-xs font-medium text-foreground opacity-0 shadow-sm transition-opacity duration-300 group-hover:opacity-100">
                     <FiMaximize2 className="h-3.5 w-3.5" aria-hidden="true" />
-                    Full screen
+                    {t.a11y.fullScreen}
                   </span>
                 </div>
               </button>
@@ -86,7 +88,7 @@ export default function ImageSlide({ images, title }) {
         {slideImages.length > 1 && (
           <>
             <button
-              aria-label="Sebelumnya"
+              aria-label={t.a11y.previous}
               className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/90 text-foreground shadow-sm transition-all hover:-translate-x-0.5 hover:bg-background disabled:cursor-not-allowed disabled:opacity-40"
               disabled={!isSwiperReady}
               onClick={handlePrevious}
@@ -95,7 +97,7 @@ export default function ImageSlide({ images, title }) {
               <FiChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
             <button
-              aria-label="Berikutnya"
+              aria-label={t.a11y.next}
               className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/90 text-foreground shadow-sm transition-all hover:translate-x-0.5 hover:bg-background disabled:cursor-not-allowed disabled:opacity-40"
               disabled={!isSwiperReady}
               onClick={handleNext}

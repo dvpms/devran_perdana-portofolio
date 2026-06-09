@@ -490,8 +490,428 @@ export const projects = [
 
 ];
 
-export function getProjectById(projectId) {
-  return projects.find((project) => project.id === projectId);
+export const en_projects = [
+  {
+    id: "pangeranplaystation-booking-system",
+    title: "Pangeran PlayStation",
+    category: "Booking Management System",
+    featured: true,
+    image: [
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-01_uy835s.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-02_qob0uz.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-03_l6n7eg.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-04_bk4qrx.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-05_jda8im.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-06_fyodbs.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-07_f1yzfo.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-08_o9oxg1.png",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-09_gqkxe9.png",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-10_je7nne.png",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-11_qnkono.png",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-12_o2cr6f.png",
+    ],
+    link: "https://www.pangeranplaystation.my.id/",
+    role: "Full Stack Developer",
+
+    contributions: [
+      "Designed the booking flow and operational workflow for the web-based rental service.",
+      "Built an admin dashboard for managing bookings, inventory, and service catalog.",
+      "Developed admin authentication and API layer using Next.js App Router.",
+      "Designed the database schema and data relationships using PostgreSQL & Prisma ORM.",
+      "Handled deployment and maintenance of the application in the production environment.",
+    ],
+
+    intro:
+      "A home-service PlayStation rental booking platform that helps customers make reservations more easily while streamlining rental operations.",
+
+    context:
+      "The PlayStation rental booking process was previously handled manually through chat. Customers had to inquire about unit availability, pricing, service areas, and booking procedures separately. On the operational side, the admin also had to record bookings and check inventory manually, making the workflow inefficient.",
+
+    solution:
+      "To simplify the booking process and rental operations, I built a web-based platform that provides a customer booking system along with an admin dashboard for operational management. The system was built using Next.js App Router with PostgreSQL and Prisma ORM for managing booking data, inventory, game catalog, and rental pricing and packages.",
+
+    highlights: [
+      "Responsive booking interface for customers.",
+      "Admin dashboard for monitoring rental operations.",
+      "Booking management with filtering and search.",
+      "PlayStation and TV inventory management.",
+      "Dynamic pricing & package management.",
+      "Game catalog manageable directly by admin.",
+      "Authentication system using NextAuth.js.",
+      "Client-side caching and data fetching with React Query.",
+    ],
+
+    challenges: [
+      "Simplifying the booking process while keeping it easy for customers to understand.",
+      "Maintaining synchronization between booking status and rental unit inventory.",
+      "Building an operational dashboard that stays simple despite having many workflows.",
+      "Optimizing the user experience across both mobile and desktop devices.",
+    ],
+
+    impact:
+      "Helped centralize booking workflows and rental operations into a single digital platform. The system helps customers understand the reservation process more clearly while enabling the admin to manage bookings and inventory in a more structured way.",
+
+    impacts: [
+      {
+        value: "Centralized",
+        label: "Booking & rental operations workflow",
+      },
+      {
+        value: "Structured",
+        label: "Booking management workflow",
+      },
+      {
+        value: "Responsive",
+        label: "Customer booking experience",
+      },
+    ],
+
+    tech: [
+      "Next.js 16",
+      "React 19",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Tailwind CSS v4",
+      "NextAuth.js",
+      "TanStack React Query",
+      "Axios",
+      "Zod",
+      "Framer Motion",
+      "Nodemailer",
+      "Vercel",
+    ],
+  },
+  {
+    id: "s-property-platform",
+    title: "S-Property Platform",
+    category: "Property Management Platform",
+    image: [
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-01_iwqqqf.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-02_ldwufl.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-03_g4llqm.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-4_pytsra.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-05_dbowus.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-06_s4wag5.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-07_o5kjsp.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-08_xrpvl7.jpg",
+      "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto/f_auto/image-09_ohpkfg.jpg",
+    ],
+    link: "https://s-property-web.vercel.app/",
+    featured: true,
+    role: "Lead Software Engineer / Full Stack Developer",
+
+    contributions: [
+      "Designed the architecture and workflow for the property company's operational platform.",
+      "Developed the property website and internal operational system for the company.",
+      "Built centralized WhatsApp communication and integrated Twilio for customer communication workflows.",
+      "Implemented automated lead distribution workflow and lead data management system for the sales team.",
+      "Handled deployment, maintenance, and ongoing development of the production system.",
+    ],
+
+    intro:
+      "A digital operational platform for a property company that integrates a property website, lead management, centralized WhatsApp communication, automated lead distribution, and sales workflows into a single digital ecosystem.",
+
+    context:
+      "Before this system was developed, lead management, customer communication, and sales workflows were handled manually using spreadsheets. The sales team and admin had to manage prospect data, customer follow-ups, lead distribution, WhatsApp communication, activity monitoring, and property management all manually. With operations spanning a parent company and two subsidiaries, this manual workflow risked scattered lead data, slow prospect distribution, and difficulty monitoring sales team performance. Additionally, the company needed a centralized WhatsApp communication solution that was more flexible and cost-efficient than relying on third-party SaaS platforms.",
+
+    solution:
+      "I built a digital operational platform to help the property company manage sales workflows, customer communication, and lead distribution in a more centralized manner. The platform consists of a property website, lead management system, centralized WhatsApp communication, agent distribution, operational dashboard, sales activity monitoring, and property management system. By building an internal system, the company can tailor operational workflows to their business needs while reducing dependency on third-party SaaS platforms. The platform has been used in production by approximately 50 employees and supports operations across the parent company and two subsidiaries.",
+
+    highlights: [
+      "Property website as a marketing and lead acquisition channel.",
+      "Master lead data for centralized prospect management.",
+      "Centralized WhatsApp communication with multi-number support.",
+      "Automated lead distribution workflow for allocating prospects to agents.",
+      "Agent registration and team management for sales operational workflows.",
+      "Role-based access management for admin, sales, and team roles.",
+      "Property management module to support sales and marketing.",
+      "PWA support and web push notifications for daily operations.",
+      "Operational ecosystem that replaces manual spreadsheet-based workflows.",
+      "Internal communication system that is more flexible than third-party SaaS.",
+    ],
+
+    challenges: [
+      "Centralizing communication from multiple business WhatsApp numbers into a single dashboard that remains user-friendly.",
+      "Designing the lead distribution workflow to match the sales team's operational needs.",
+      "Keeping lead data organized despite being used by many users simultaneously.",
+      "Managing user roles and access based on the company's organizational structure.",
+      "Accommodating the operational needs of the parent company and two subsidiaries within a single platform.",
+      "Maintaining system usability for comfortable daily operations at a scale of approximately 50 employees.",
+    ],
+
+    impact:
+      "The platform helped the company centralize lead management, customer communication, sales distribution, and operational workflows into a single digital system. With centralized communication and automated lead distribution, the sales team and admin can work in a more structured and faster manner, reducing the risk of scattered prospect data and improving customer follow-up consistency. The system also provides the company with an internal communication workflow that is more flexible and cost-efficient compared to relying on third-party SaaS platforms.",
+
+    impacts: [
+      {
+        value: "50+",
+        label: "Employees using the system in production",
+      },
+      {
+        value: "3",
+        label: "Company entities supported on one platform",
+      },
+      {
+        value: "Centralized",
+        label: "WhatsApp communication & lead management",
+      },
+      {
+        value: "Automated",
+        label: "Lead distribution workflow",
+      },
+    ],
+
+    tech: [
+      "Next.js",
+      "Tailwind",
+      "Framer Motion",
+      "Redux Toolkit",
+      "MongoDB",
+      "Twilio",
+      "Cloudinary",
+      "+7 more",
+      ],
+  },
+  {
+    id: "mini-erp-saas",
+    title: "ERP SaaS",
+    category: "Multi-Tenant Business Management System",
+    image: ["https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-01_kdndor.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745211/image-02_sxg7nh.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-03_muwvfc.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-04_mb9dfx.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-05_es5u7a.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-06_jpr8kf.png", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-07_sxhbfw.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745183/image-08_ps2q40.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-09_ve2l9o.jpg", "https://res.cloudinary.com/dnmhna2fc/image/upload/v1780745184/image-10_uwmqpj.jpg"],
+    link: "#",
+    role: "Full Stack Developer",
+    
+    contributions: [
+      "Designed and implemented the multi-tenant SaaS application architecture using Laravel and Vue.js.",
+      "Built the authentication system, role-based access control, and data isolation between tenants.",
+      "Developed product management, transaction, and reporting modules.",
+      "Implemented price snapshots on transactions to maintain historical data integrity.",
+      "Built a frontend design system using Tailwind CSS.",
+      "Prepared technical documentation and automated testing to ensure system quality."
+    ],
+    
+    intro:
+    "A SaaS-based ERP application that helps businesses manage products, transactions, and operational reports through a secure and structured multi-tenant platform.",
+    
+    context:
+    "This project was developed to simulate the needs of a modern SaaS application capable of serving multiple organizations on a single platform, with a focus on data security, access control, and transaction consistency.",
+    
+    solution:
+    "I built a full-stack application using Laravel and Vue.js that supports multi-tenant architecture, role-based permissions, product management, transactions, and a reporting dashboard with data visualization. The system also includes tenant isolation, historical transaction tracking, and automated testing.",
+    
+    highlights: [
+      "Multi-tenant SaaS architecture with shared database",
+      "Role-based access control (Owner & Staff)",
+      "Product and transaction management",
+      "Price snapshots to maintain historical data accuracy",
+      "Reporting dashboard with chart visualization",
+      "Design system built with Tailwind CSS",
+      "Postman Collection and Laravel Feature Tests"
+    ],
+    
+    challenges: [
+      "Maintaining data isolation between tenants within a single database.",
+      "Ensuring transaction history remains accurate even when product prices change.",
+      "Designing an authorization system that is simple yet secure.",
+      "Presenting reports and charts based on user-selected date ranges."
+    ],
+    
+    impact:
+    "This project demonstrates the ability to build a full-stack application that goes beyond CRUD, encompassing multi-tenant architecture, data security, reporting, documentation, and sound software engineering practices.",
+    
+    impacts: [
+    {
+    value: "Multi-Tenant",
+    label: "Data isolation architecture"
+    },
+    {
+    value: "2 Role",
+    label: "Owner & Staff"
+    },
+    {
+    value: "Tested",
+    label: "Postman & Feature Tests"
+    },
+    {
+    value: "Full Stack",
+    label: "Laravel & Vue.js"
+    }
+    ],
+    
+    tech: [
+    "Laravel",
+    "Laravel Sanctum",
+    "MySQL",
+    "Vue 3",
+    "Pinia",
+    "Vue Router",
+    "Axios",
+    "Tailwind CSS",
+    "Chart.js",
+    "SweetAlert2",
+    "Postman",
+    "PHPUnit"
+    ]
+    },
+  {
+  id: "wushu-tournament-system",
+  title: "Wushu Tournament System",
+  category: "Tournament Management Platform",
+  image: ["https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-01_up6ixx.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-02_kekojs.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-03_hrn5rh.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-04_pyg8pa.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-05_aprcs6.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-06_zx3e7p.jpg",
+          "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-07_eg29ry.jpg",
+         ],
+  link: "https://www.bupaticup.site/",
+  featured: true,
+  role: "Full Stack Developer",
+
+  contributions: [
+    "Designed the digital workflow for wushu tournament management.",
+    "Built the athlete and contingent registration system.",
+    "Developed an admin dashboard for data and payment validation.",
+    "Designed the database schema to manage relationships between athletes, contingents, categories, and matches.",
+    "Helped simplify the tournament data recapitulation process that was previously done manually."
+  ],
+
+  intro:
+    "A wushu tournament management platform that streamlines participant registration, validation, payment processing, and match data recapitulation.",
+
+  context:
+    "Before this system was built, tournament data management was largely handled manually—from athlete registration and contingent data collection to payment validation and match data compilation. This manual process risked scattered data, recapitulation errors, and slowed down tournament administration.",
+
+  solution:
+    "I built a web-based tournament management platform to help organizers manage athlete registration, contingent data, payment validation, and match information recapitulation in a single centralized system. With this approach, tournament administration became more organized, easier to monitor, and less dependent on manual record-keeping.",
+
+  highlights: [
+    "Athlete and contingent registration system.",
+    "Admin dashboard for monitoring participant data.",
+    "Participant payment validation.",
+    "Match category and class data management.",
+    "Relational database structure for athletes, contingents, and matches.",
+    "Tournament data recapitulation in a single platform.",
+    "More centralized administration workflow."
+  ],
+
+  challenges: [
+    "Designing a data structure that links athletes, contingents, match classes, and payment statuses.",
+    "Simplifying the administration workflow to be easy for organizers to use.",
+    "Reducing the risk of data errors from manual recapitulation processes.",
+    "Building a system that helps organizers monitor participant and payment statuses more quickly."
+  ],
+
+  impact:
+    "The system helped organizers centralize tournament administration processes into a single digital platform. Management of athlete data, contingents, payments, and recapitulation became more structured, reducing the risk of scattered data and speeding up administration validation.",
+
+  impacts: [
+    {
+      value: "Centralized",
+      label: "Athlete, contingent, and payment data"
+    },
+    {
+      value: "Structured",
+      label: "Tournament administration workflow"
+    },
+    {
+      value: "Reduced",
+      label: "Risk of manual recapitulation errors"
+    }
+  ],
+
+  tech: [
+    "React",
+    "Node.js",
+    "PostgreSQL",
+    "Supabase",
+    "Tailwind CSS",
+    "Vercel"
+  ]
+},
+  {
+  id: "raos-saji-digital-catalog",
+  title: "Raos Saji",
+  category: "Digital Product Catalog",
+  image: [
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-01_z9dkyr.jpg",
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-02_tygoyh.jpg",
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-03_t90dcb.jpg",
+    "https://res.cloudinary.com/dnmhna2fc/image/upload/q_auto:best/e_upscale/image-04_gyigm0.jpg"
+  ],
+  link: "https://raos-saji-web.vercel.app/",
+  role: "Frontend Developer",
+
+  contributions: [
+    "Designed the information architecture for a single-page website.",
+    "Developed the landing page and culinary product catalog.",
+    "Implemented a responsive user interface.",
+    "Displayed product categories, pricing, and contact information on a single page.",
+    "Deployed the website to Vercel."
+  ],
+
+  intro:
+    "A digital product catalog website that helps a culinary brand showcase products, pricing, and contact information in a professional single-page format.",
+
+  context:
+    "The client needed a simple digital medium to display culinary products and introduce the brand to customers in a more polished way than relying solely on social media or direct messaging.",
+
+  solution:
+    "I built a responsive landing page that serves as a digital product catalog. The website displays a brief brand profile, product highlights, menu categories, product pricing, and contact channels through WhatsApp and Instagram so customers can easily find information and reach the business owner.",
+
+  highlights: [
+    "One-page landing page for a culinary brand.",
+    "Product catalog showcase organized by menu category.",
+    "Easy-to-read product pricing information.",
+    "Brand storytelling section to introduce the business.",
+    "Contact section with access to WhatsApp and Instagram.",
+    "Responsive layout for desktop and mobile.",
+    "Deployment using Vercel."
+  ],
+
+  challenges: [
+    "Displaying multiple product categories without making the page feel too crowded.",
+    "Maintaining visual consistency aligned with the culinary brand identity.",
+    "Keeping the product catalog easy to read on mobile devices.",
+    "Guiding users toward ordering contacts with a simple flow."
+  ],
+
+  impact:
+    "The website helped centralize Raos Saji's product information on a single, easily accessible digital page. Customers can view the brand profile, product listings, pricing, and ordering contacts without having to search for information separately.",
+
+  impacts: [
+    {
+      value: "1 Page",
+      label: "Product catalog landing page"
+    },
+    {
+      value: "3+",
+      label: "Product categories displayed"
+    },
+    {
+      value: "Direct",
+      label: "WhatsApp and Instagram contact access"
+    }
+  ],
+
+  tech: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Vercel"
+  ]
+}
+
+];
+
+export function getLocalizedProjects(locale) {
+  return locale === "en" ? en_projects : projects;
+}
+
+export function getProjectById(projectId, locale) {
+  const data = getLocalizedProjects(locale);
+  return data.find((project) => project.id === projectId);
 }
 
 export function getProjectPrimaryImage(project) {
@@ -502,6 +922,7 @@ export function getProjectPrimaryImage(project) {
   return Array.isArray(project.image) ? project.image[0] : project.image;
 }
 
-export function getFeaturedProjects() {
-  return projects.filter((project) => project.featured);
+export function getFeaturedProjects(locale) {
+  const data = getLocalizedProjects(locale);
+  return data.filter((project) => project.featured);
 }
