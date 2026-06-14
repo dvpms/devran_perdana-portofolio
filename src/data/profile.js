@@ -10,8 +10,8 @@ export const profile = {
   subheading: "Full Stack Developer yang fokus membangun sistem digital untuk membantu bisnis bekerja lebih efisien.", 
   tagline:
     "Build with Intent, Real Impact",
-  // focus:
-  //   "Saat ini sedang mendalami arsitektur Event-Driven menggunakan Kafka untuk optimasi microservices, dan terbuka untuk peluang kerja sebagai Senior Full Stack Developer.",
+  focus:
+    "Progress on Digital Scoring Pencak Silat System",
   socials: [
     { label: "GitHub", href: "https://github.com/dvpms" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/devranperdanamalik/" },
