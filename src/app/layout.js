@@ -13,6 +13,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const googleTagIdPattern = /^(G-[A-Z0-9]+|AW-\d+)$/;
+const rawGoogleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID;
+const googleTagId = typeof rawGoogleTagId === "string" && googleTagIdPattern.test(rawGoogleTagId) ? rawGoogleTagId : null;
+
 export const metadata = {
   metadataBase: new URL("https://devranperdana.my.id/"),
   title: {
@@ -87,6 +91,21 @@ export default function RootLayout({ children }) {
   return (
     <html className={`${geistSans.variable} ${geistMono.variable}`} lang="id">
       <head>
+        {googleTagId ? (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', ${JSON.stringify(googleTagId)});
+                `,
+              }}
+            />
+          </>
+        ) : null}
         <SchemaMarkup schema={schemaData} />
       </head>
       <body className="antialiased">
