@@ -60,6 +60,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID;
+
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -87,6 +89,21 @@ export default function RootLayout({ children }) {
   return (
     <html className={`${geistSans.variable} ${geistMono.variable}`} lang="id">
       <head>
+        {googleTagId ? (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${googleTagId}');
+                `,
+              }}
+            />
+          </>
+        ) : null}
         <SchemaMarkup schema={schemaData} />
       </head>
       <body className="antialiased">
