@@ -13,6 +13,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const googleTagIdPattern = /^(G-[A-Z0-9]+|AW-\d+)$/;
+const rawGoogleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID;
+const googleTagId = typeof rawGoogleTagId === "string" && googleTagIdPattern.test(rawGoogleTagId) ? rawGoogleTagId : null;
+
 export const metadata = {
   metadataBase: new URL("https://devranperdana.my.id/"),
   title: {
@@ -60,8 +64,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID;
-
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -98,7 +100,7 @@ export default function RootLayout({ children }) {
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${googleTagId}');
+                  gtag('config', ${JSON.stringify(googleTagId)});
                 `,
               }}
             />
